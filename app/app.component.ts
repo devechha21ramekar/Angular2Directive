@@ -1,13 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app',
-    template: `<h1>Hello {{ name }}!</h1>`
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css']
 })
 export class AppComponent {
-    name: string;
-
-    constructor() {
-        this.name = 'Angular 2';
+    private switch = true;
+    private items = [1, 2, 3, 4, 5];
+    private value = 10;
+    onSwitch() {
+        this.switch = !this.switch;
     }
 }
